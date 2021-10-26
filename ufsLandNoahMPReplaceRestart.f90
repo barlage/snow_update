@@ -607,13 +607,6 @@ contains
         layer_depths(2) = snow_soil_interface(iloc,2)-snow_soil_interface(iloc,1)
         layer_depths(3) = snow_soil_interface(iloc,3)-snow_soil_interface(iloc,2)
 
-!if(iloc ==  10962)then
-!print*, 'depths',  iloc,obs_snow_depth(iloc)  ,snow_depth(iloc)
-!print*, 'increment',  increment(iloc)  ,layer_depths
-!print*, 'interfaces',    snow_soil_interface(iloc,:)
-!print*, 'ice',    snow_ice_layer(iloc,:), swe(iloc)
-!print*, 'liq',    snow_liq_layer(iloc,:)
-!end if
         if(increment(iloc) > 0.0) then  ! add snow in multi-layer mode
 
           pathway = 1
