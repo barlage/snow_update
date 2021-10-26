@@ -624,7 +624,7 @@ contains
           
             partition_ratio = -layer_depths(ilayer)/snow_depth(iloc)*1000.d0
             layer_density = (snow_ice_layer(iloc,ilayer)+snow_liq_layer(iloc,ilayer)) / &
-                              (-snow_soil_interface(iloc,ilayer))
+                              (-layer_depths(ilayer))
             swe_increment = partition_ratio * increment(iloc) * layer_density / 1000.d0
             liq_ratio = snow_liq_layer(iloc,ilayer) / &
                           ( snow_ice_layer(iloc,ilayer) + snow_liq_layer(iloc,ilayer) )
